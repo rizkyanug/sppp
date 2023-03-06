@@ -24,7 +24,7 @@ header("Content-Disposition: attachment;Filename=data-transaksi.doc");
 <p>&nbsp;</p>
 
 
-  <table>
+  <table border="2">
       <thead>
         <tr>
           <th>No</th>
@@ -98,7 +98,7 @@ header("Content-Disposition: attachment;Filename=data-transaksi.doc");
 		  <td><?php echo $data['nama']; ?></td>
 		  <td><?= $kelasnow; ?> - <?= $data['nama_kelas']; ?></td>
 		  <td><?php echo $data['tgl_bayar']; ?></td>
-		  <td><?php if($data['bulan_dibayar']==1){ echo "Januari"; }else if($data['bulan_dibayar']==2){ echo "Februari"; }else if($data['bulan_dibayar']==3){ echo "Maret"; }else if($data['bulan_dibayar']==4){ echo "April"; }else if($data['bulan_dibayar']==5){ echo "Mei"; }else if($data['bulan_dibayar']==6){ echo "Juni"; }else if($data['bulan_dibayar']==7){ echo "Juli"; } else if($data['bulan_dibayar']==8){ echo "Agustus"; }else if($data['bulan_dibayar']==9){ echo "September"; }else if($data['bulan_dibayar']==10){ echo "Oktober"; }else if($data['bulan_dibayar']==11){ echo "November"; }else if($data['bulan_dibayar']==12){ echo "Desember"; }?></td>
+		  <td><?php echo $data['bulan_dibayar']; ?></td>
 		  <td><?php echo $data['tahun_dibayar']; ?></td>
 		  <td><?php echo $data['nama_petugas']; ?></td>
          

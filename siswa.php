@@ -49,11 +49,11 @@
                           <th>NISN</th>
                           <th>NIS</th>
                           <th>NAMA</th>
-                          <th>ID KELAS</th>
+                          <th> KELAS</th>
                           <th>ALAMAT</th>
                           <th>NO TELP</th>
                           <th>ID SPP</th>
-                           <th>ACTION</th>   
+                           <th>AKSI</th>   
                         </tr>
                         </thead>
                          <tbody>

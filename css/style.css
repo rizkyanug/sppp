@@ -77,7 +77,8 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
   margin-left: 4px; }
 
 .bg-primary {
-  background-color: #0d86e9 !important; } 
+  background-image: url("../assets/fontawesome-free/img/sea.jpg");
+  background-size: cover; }
 
 .bg-secondary {
   background-color: #cdd3d8 !important; }
