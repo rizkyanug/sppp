@@ -3,7 +3,10 @@
   include ('tampilan/header.php');
   include ('tampilan/sidebar.php');
   include ('tampilan/footer.php');
+
+  
 ?>
+
  <!-- Main Content -->
       <div class="main-content bg-primary">
         <section class="section">
