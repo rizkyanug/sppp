@@ -4,7 +4,7 @@ $id = $_GET["id"];
 //mengambil id yang ingin dihapus
 
     //jalankan query DELETE untuk menghapus data
-    $query = "DELETE FROM spp WHERE id_spp='$id' ";
+    $query = "DELETE FROM pembayaran WHERE id_pembayaran='$id' ";
     $hasil_query = mysqli_query($koneksi, $query);
 
     //periksa query, apakah ada kesalahan

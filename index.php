@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <img src="img/avatar/logo icb.png"
+  class="rounded mx-auto d-block"
+  alt=""
+  style="width:200px;height:200px;">
+  
 
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -43,9 +48,9 @@
       <div class="container mt-5">
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-            <div class="login-brand">
-              <img src="img/avatar/logo icb.png" alt="logo" width="100" class="shadow-light rounded-circle">
-            </div>
+
+            <h2> <p align="center"><font color="white"> <B>APLIKASI SPP</B> </font></p> </h2>
+            <h2> <p align="center"><font color="white"> <B>SMK ICB CINTA NIAGA</B> </font></p> </h2>
 
             <div class="card card-info">
               <div class="card-header"><h4>Silahkan Masuk</h4></div>

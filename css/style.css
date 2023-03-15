@@ -77,7 +77,7 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
   margin-left: 4px; }
 
 .bg-primary {
-  background-image: url("../assets/fontawesome-free/img/sea.jpg");
+  background-image: url("../assets/fontawesome-free/img/sea8.jpg");
   background-size: cover; }
 
 .bg-secondary {
@@ -1959,7 +1959,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   font-family: "Nunito", "Segoe UI", arial;
-  background-image: url("../assets/fontawesome-free/img/sea.jpg");
+  background-image: url("../assets/fontawesome-free/img/sea8.jpg");
   background-size: cover; }
 
 a.bb {

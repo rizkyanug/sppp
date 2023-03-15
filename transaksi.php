@@ -112,11 +112,6 @@
             </div>
 
 
-             
-
-
-
-
             <br/>   
 
 
@@ -143,7 +138,8 @@
                   $query = mysqli_query($koneksi, "SELECT * FROM siswa WHERE nisn='$_GET[nisn]'");
                   $data = mysqli_fetch_array($query);
                   $nisn = $data['nisn'];
-                
+
+
                 ?>
 
                 <h2>DATA SISWA</h2>
@@ -182,7 +178,6 @@
                 <tbody>
                   <?php 
                   $query = mysqli_query($koneksi,"SELECT * FROM pembayaran WHERE nisn='$data[nisn]' ORDER BY bulan_dibayar ASC");
-                
 
                   while ($data=mysqli_fetch_array($query)) {
                     echo" <tr>
@@ -197,7 +192,6 @@
 
                         </tr>";
                   }
-
                    ?>
 
                 </tbody>

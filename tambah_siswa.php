@@ -117,7 +117,7 @@
                              <option value="not_option"> silahkan pilih tahun masuk</option>
                               <?php
                                   // jalankan query untuk menampilkan semua data diurutkan berdasarkan
-                                  $query = "SELECT * FROM spp ORDER BY tahun ASC";
+                                  $query = "SELECT * FROM pembayaran ORDER BY tahun_dibayar ASC";
                                   $result = mysqli_query($koneksi, $query);
                                   //mengecek apakah ada error ketika menjalankan query
                                   if(!$result){
@@ -132,7 +132,7 @@
                                   while($row = mysqli_fetch_assoc($result))
                                   {
                                   ?>
-                             <option value="<?php echo $row['id_spp']; ?>"><?php echo $row['tahun']; ?></option>
+                             <option value="<?php echo $row['id_spp']; ?>"><?php echo $row['tahun_dibayar']; ?></option>
                              <?php
                                     $no++; //untuk nomor urut terus bertambah 1
                                   }

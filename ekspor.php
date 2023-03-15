@@ -24,7 +24,7 @@ header("Content-Disposition: attachment;Filename=data-transaksi.doc");
 <p>&nbsp;</p>
 
 
-  <table border="2">
+  <table border="5">
       <thead>
         <tr>
           <th>No</th>
@@ -39,7 +39,7 @@ header("Content-Disposition: attachment;Filename=data-transaksi.doc");
     </thead>
     <tbody>
       <?php
-    $query = "SELECT * FROM pembayaran,siswa,spp,petugas,kelas WHERE pembayaran.nisn=siswa.nisn AND siswa.id_spp=spp.id_spp AND pembayaran.id_petugas=petugas.id_petugas AND siswa.id_kelas=kelas.id_kelas AND (pembayaran.tgl_bayar between '$daritanggal' AND '$sampaitanggal')";
+    $query = "SELECT * FROM pembayaran,siswa,spp,petugas,kelas WHERE pembayaran.nisn=siswa.nisn AND pembayaran.id_petugas=petugas.id_petugas AND siswa.id_kelas=kelas.id_kelas AND (pembayaran.tgl_bayar between '$daritanggal' AND '$sampaitanggal')";
     $result = mysqli_query($koneksi, $query);
     if(!$result){
       die ("Query Error: ".mysqli_errno($koneksi).

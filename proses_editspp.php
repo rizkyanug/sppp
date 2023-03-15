@@ -10,7 +10,7 @@ include 'koneksi.php';
   //cek dulu jika merubah gambar produk jalankan coding ini
   
                     // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-                   $query  = "UPDATE spp SET nominal = '$nominal' WHERE id_spp = '$id'";
+                   $query  = "UPDATE pembayaran SET jumlah_bayar = '$nominal' WHERE id_pembayaran = '$id'";
                     $result = mysqli_query($koneksi, $query);
                     // periska query apakah ada error
                     if(!$result){

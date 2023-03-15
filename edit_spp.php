@@ -8,7 +8,7 @@ include 'koneksi.php';
     $id = ($_GET["id"]);
 
     // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM spp WHERE id_spp='$id'";
+    $query = "SELECT * FROM pembayaran WHERE id_pembayaran='$id'";
     $result = mysqli_query($koneksi, $query);
     // jika data gagal diambil maka akan tampil error berikut
     if(!$result){
@@ -73,17 +73,17 @@ include 'koneksi.php';
 
                     <form class="wizard-content mt-2" method="post" action="proses_editspp.php">
                       <div class="wizard-pane">
-                        <input name="id" value="<?php echo $data['id_spp']; ?>"  hidden />
+                        <input name="id" value="<?php echo $data['id_pembayaran']; ?>"  hidden />
                         <div class="form-group row align-items-center">
                           <label class="col-md-4 text-md-right text-white">TAHUN</label>
                           <div class="col-lg-4 col-md-6">
-                            <input type="text" name="tahun" value="<?php echo $data['tahun']; ?>" disabled="disabled"/>
+                            <input type="text" name="tahun" value="<?php echo $data['tahun_dibayar']; ?>" disabled="disabled"/>
                           </div>
                         </div>
                         <div class="form-group row align-items-center">
                           <label class="col-md-4 text-md-right text-white">NOMINAL</label>
                           <div class="col-lg-4 col-md-6">
-                              <input type="text" name="nominal" value="<?php echo $data['nominal']; ?>" required=""/>
+                              <input type="text" name="nominal" value="<?php echo $data['jumlah_bayar']; ?>" required=""/>
                           </div>
                         </div>
                         <div class="form-group row">

@@ -52,7 +52,6 @@
                           <th> KELAS</th>
                           <th>ALAMAT</th>
                           <th>NO TELP</th>
-                          <th>ID SPP</th>
                            <th>AKSI</th>   
                         </tr>
                         </thead>
@@ -79,10 +78,9 @@
                           <td><?php echo $row['nisn']; ?></td>
                            <td><?php echo $row['nis']; ?></td>
                             <td><?php echo $row['nama']; ?></td>
-                             <td><?php echo $row['id_kelas']; ?></td>  
+                             <td><?php echo $row['nama_kelas']; ?></td>  
                               <td><?php echo $row['alamat']; ?></td>
                                <td><?php echo $row['no_telp']; ?></td>
-                                <td><?php echo substr ($row['id_spp'], 0, 20); ?></td>
                           <td>
                           <a href="edit_siswa.php?id=<?php echo $row['nisn']; ?>"class="btn btn-primary"><i class="fas fa-edit"></i></a>
                           <a href="proses_hapussiswa.php?id=<?php echo $row['nisn']; ?>" class="btn btn-danger" onClick="return confirm('Anda yakin akan menghapus data ini?')"><i class="fas fa-trash"></i></a>

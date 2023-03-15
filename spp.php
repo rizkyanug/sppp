@@ -34,9 +34,6 @@
                     <h4>LIST SPP</h4>
                     <div class="card-header-form">
                       <form>
-                          <div class="input-group-btn">
-                            <a href="tambah_spp.php" class="btn btn-primary"><i class="fas fa-plus"></i></a>
-                        </div>
                       </form>
                     </div>
                   </div>
@@ -46,7 +43,7 @@
                        <thead>
                           <tr>
                           <th>NO</th>
-                          <th>TAHUN</th>
+                          <th>TANGGAL BAYAR</th>
                           <th>NISN</th>
                           <th>NOMINAL</th>
                           <th>ACTION</th>
@@ -55,7 +52,7 @@
                          <tbody>
                            <?php
                               // jalankan query untuk menampilkan semua data diurutkan berdasarkan id
-                              $query = "SELECT * FROM spp ORDER BY id_spp ASC";
+                              $query = "SELECT * FROM pembayaran ORDER BY id_pembayaran ASC";
                               $result = mysqli_query($koneksi, $query);
                               //mengecek apakah ada error ketika menjalankan query
                               if(!$result){
@@ -72,12 +69,12 @@
                               ?>
                         <tr>  
                           <td><?php echo $no; ?></td>
-                          <td><?php echo $row['tahun']; ?></td>
-                          <td><?php echo $row['nisn_siswa']; ?></td>
-                          <td><?php echo substr($row['nominal'], 0, 20); ?></td>   
+                          <td><?php echo $row['tgl_bayar']; ?></td>
+                          <td><?php echo $row['nisn']; ?></td>
+                          <td><?php echo substr($row['jumlah_bayar'], 0, 20); ?></td>   
                           <td>
-                          <a href="edit_spp.php?id=<?php echo $row['id_spp']; ?>"class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                          <a href="proses_hapusspp.php?id=<?php echo $row['id_spp']; ?>" class="btn btn-danger" onClick="return confirm('Anda yakin akan menghapus data ini?')"><i class="fas fa-trash"></i></a>
+                          <a href="edit_spp.php?id=<?php echo $row['id_pembayaran']; ?>"class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                          <a href="proses_hapusspp.php?id=<?php echo $row['id_pembayaran']; ?>" class="btn btn-danger" onClick="return confirm('Anda yakin akan menghapus data ini?')"><i class="fas fa-trash"></i></a>
                           </td>
                         </tr>
                          <?php

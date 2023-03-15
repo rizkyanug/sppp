@@ -29,7 +29,7 @@
                       <div class="card-stats-item-label">B Lunas</div>
                     </div>
                     <div class="card-stats-item">
-                      <div class="card-stats-item-count">21</div>
+                      <div class="card-stats-item-count">2</div>
                       <div class="card-stats-item-label">Lunas</div>
                     </div>
                   </div>
@@ -60,7 +60,7 @@
                       <div class="card-stats-item-label">B Lunas</div>
                     </div>
                     <div class="card-stats-item">
-                      <div class="card-stats-item-count">21</div>
+                      <div class="card-stats-item-count">3</div>
                       <div class="card-stats-item-label">Lunas</div>
                     </div>
                   </div>
@@ -91,7 +91,7 @@
                       <div class="card-stats-item-label">B Lunas</div>
                     </div>
                     <div class="card-stats-item">
-                      <div class="card-stats-item-count">21</div>
+                      <div class="card-stats-item-count">5</div>
                       <div class="card-stats-item-label">Lunas</div>
                     </div>
                   </div>
@@ -122,7 +122,7 @@
                       <div class="card-stats-item-label">B Lunas</div>
                     </div>
                     <div class="card-stats-item">
-                      <div class="card-stats-item-count">21</div>
+                      <div class="card-stats-item-count">4</div>
                       <div class="card-stats-item-label">Lunas</div>
                     </div>
                   </div>
@@ -153,7 +153,7 @@
                       <div class="card-stats-item-label">B Lunas</div>
                     </div>
                     <div class="card-stats-item">
-                      <div class="card-stats-item-count">0</div>
+                      <div class="card-stats-item-count">5</div>
                       <div class="card-stats-item-label">Lunas</div>
                     </div>
                   </div>
