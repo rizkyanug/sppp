@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Apr 2021 pada 01.11
--- Versi server: 10.4.13-MariaDB
--- Versi PHP: 7.4.8
+-- Generation Time: Mar 15, 2023 at 06:41 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelas`
+-- Table structure for table `kelas`
 --
 
 CREATE TABLE `kelas` (
@@ -34,18 +34,20 @@ CREATE TABLE `kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kelas`
+-- Dumping data for table `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `kompetensi_keahlian`) VALUES
-(1, 'X MIPA 1', 'IPA'),
-(2, 'XI IPS 1', 'IPS'),
-(3, 'XII BAHASA', 'BAHASA/SASTRA');
+(1, 'XII OTKP 1', 'PERKANTORAN 1'),
+(2, 'XII OTKP 2', 'PERKANTORAN 2'),
+(3, 'XII AKL', 'AKUNTANSI'),
+(4, 'XII BDP', 'PEMASARAN'),
+(5, 'XII RPL', 'PERANGKAT LUNAK');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pembayaran`
+-- Table structure for table `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -60,16 +62,20 @@ CREATE TABLE `pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pembayaran`
+-- Dumping data for table `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `id_petugas`, `nisn`, `tgl_bayar`, `bulan_dibayar`, `tahun_dibayar`, `id_spp`, `jumlah_bayar`) VALUES
-(2, 2, '2020112233', '2021-03-30', 'maret', '2019', 3, 300000);
+(12, 1, '200041', '2023-03-01', 'maret', '2023', 2000000, 350000),
+(13, 1, '200042', '2023-03-02', 'maret', '2023', 200001, 350000),
+(15, 1, '200047', '2023-03-13', 'maret', '2023', 2000008, 350000),
+(16, 1, '200043', '2023-03-16', 'maret', '2023', 20000078, 350000),
+(17, 1, '200049', '2023-03-23', 'maret', '2023', 266855856, 350000);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `petugas`
+-- Table structure for table `petugas`
 --
 
 CREATE TABLE `petugas` (
@@ -81,18 +87,18 @@ CREATE TABLE `petugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `petugas`
+-- Dumping data for table `petugas`
 --
 
 INSERT INTO `petugas` (`id_petugas`, `username`, `password`, `nama_petugas`, `level`) VALUES
-(1, 'admin1', 'admin', 'April', 'admin'),
-(2, 'petugas1', 'petugas', 'lia', 'petugas'),
-(7, '2020112233', 'ramdan', 'ramdan', 'siswa');
+(1, 'admin1', 'admin', 'rizky', 'admin'),
+(2, 'petugas1', 'petugas', 'rizky', 'petugas'),
+(3, 'siswa1', 'siswa', 'rizky', 'siswa');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `siswa`
+-- Table structure for table `siswa`
 --
 
 CREATE TABLE `siswa` (
@@ -106,50 +112,48 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `siswa`
+-- Dumping data for table `siswa`
 --
 
 INSERT INTO `siswa` (`nisn`, `nis`, `nama`, `id_kelas`, `alamat`, `no_telp`, `id_spp`) VALUES
-('2020112233', '18191010', 'Muhammad Ramdan', 1, 'Perumahan Padasuka blok c no.32', '089665412345', 3),
-('2020112234', '18191011', 'Ahmad Setiawan', 2, 'Perumahan Giriharja blok g no.135', '087653998764', 2),
-('2020112235', '18191012', 'Mira Helmalia', 3, 'Komplek Sumur bandung no.76', '081432567890', 1),
-('2020112236', '181910123', 'Aisha Amira Devina', 2, 'Perumahan Alam Indah blok f no.211', '085677908443', 2),
-('2020112237', '18191013', 'Muhamad Hendra', 3, 'Perumahan Padasuka blok a no.4', '082456334987', 1),
-('2020112238', '18191014', 'tanti Dwi Putri', 1, 'Perumahan Mekar Mukti blok b no.43', '085222674908', 3);
+('200041', '100041', 'harlan', 1, 'dago', '089999888777', 10),
+('200042', '100042', 'rizky', 5, 'cimuncang', '089999999999', 10),
+('200043', '100043', 'ilham', 5, 'setiabudhi', '0899999777', 10),
+('200047', '200048', 'atha', 5, 'dago', '6757473445', 234256346),
+('200049', '100049', 'iksan', 2, 'cicadas', '088776655532', 10);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `spp`
+-- Table structure for table `spp`
 --
 
 CREATE TABLE `spp` (
   `id_spp` int(11) NOT NULL,
+  `nisn_siswa` varchar(11) NOT NULL,
   `tahun` int(11) NOT NULL,
   `nominal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `spp`
+-- Dumping data for table `spp`
 --
 
-INSERT INTO `spp` (`id_spp`, `tahun`, `nominal`) VALUES
-(1, 2019, 130000),
-(2, 2020, 140000),
-(3, 2021, 150000);
+INSERT INTO `spp` (`id_spp`, `nisn_siswa`, `tahun`, `nominal`) VALUES
+(10, '08996907862', 2023, 350000);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `kelas`
+-- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id_kelas`);
 
 --
--- Indeks untuk tabel `pembayaran`
+-- Indexes for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id_pembayaran`),
@@ -158,13 +162,13 @@ ALTER TABLE `pembayaran`
   ADD KEY `id_spp` (`id_spp`);
 
 --
--- Indeks untuk tabel `petugas`
+-- Indexes for table `petugas`
 --
 ALTER TABLE `petugas`
   ADD PRIMARY KEY (`id_petugas`);
 
 --
--- Indeks untuk tabel `siswa`
+-- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`nisn`),
@@ -172,57 +176,39 @@ ALTER TABLE `siswa`
   ADD KEY `id_spp` (`id_spp`);
 
 --
--- Indeks untuk tabel `spp`
+-- Indexes for table `spp`
 --
 ALTER TABLE `spp`
-  ADD PRIMARY KEY (`id_spp`);
+  ADD PRIMARY KEY (`id_spp`),
+  ADD KEY `nisn_siswa_2` (`nisn_siswa`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `kelas`
+-- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `pembayaran`
+-- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `petugas`
+-- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
   MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `spp`
+-- AUTO_INCREMENT for table `spp`
 --
 ALTER TABLE `spp`
-  MODIFY `id_spp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `pembayaran`
---
-ALTER TABLE `pembayaran`
-  ADD CONSTRAINT `pembayaran_ibfk_1` FOREIGN KEY (`id_petugas`) REFERENCES `petugas` (`id_petugas`),
-  ADD CONSTRAINT `pembayaran_ibfk_2` FOREIGN KEY (`nisn`) REFERENCES `siswa` (`nisn`),
-  ADD CONSTRAINT `pembayaran_ibfk_3` FOREIGN KEY (`id_spp`) REFERENCES `siswa` (`id_spp`);
-
---
--- Ketidakleluasaan untuk tabel `siswa`
---
-ALTER TABLE `siswa`
-  ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`),
-  ADD CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`id_spp`) REFERENCES `spp` (`id_spp`);
+  MODIFY `id_spp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
